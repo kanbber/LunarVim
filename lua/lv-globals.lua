@@ -19,7 +19,7 @@ O = {
 
     database = {save_location = '~/.config/nvcode_db', auto_execute = 1},
     python = {
-        linter = '',
+        linter = 'yapf',
         -- @usage can be 'yapf', 'black'
         formatter = '',
         autoformat = false,

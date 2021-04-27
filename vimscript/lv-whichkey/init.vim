@@ -1,7 +1,7 @@
 " Leader Key Maps
 
 " Timeout
-let g:which_key_timeout = 100
+let g:which_key_timeout = 40
 
 let g:which_key_display_names = {'<CR>': '↵', '<TAB>': '⇆', " ": 'SPC'}
 
@@ -29,6 +29,8 @@ let g:which_key_map['f'] = [ ':Telescope find_files'                           ,
 let g:which_key_map['h'] = [ '<C-W>s'                                          , 'split below']
 let g:which_key_map['H'] = [ ':let @/ = ""'                                    , 'no highlight' ]
 let g:which_key_map['r'] = [ ':RnvimrToggle'                                   , 'ranger' ]
+let g:which_key_map['t'] = [ ':Lspsaga open_floaterm'                          , 'open terminal' ]
+let g:which_key_map['z'] = [ ':TZAtaraxis'                                     , 'zen mode' ]
 " TODO create entire treesitter section
 let g:which_key_map['v'] = [ '<C-W>v'                                          , 'split right']
 " TODO play nice with status line
