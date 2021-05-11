@@ -27,6 +27,7 @@ vim.g.dashboard_custom_header = {
     ' ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═══╝╚═════╝ ╚═════╝ ╚══════╝╚═╝  ╚═╝',
     '',
 }
+-- vim.g.dashboard_custom_header = O.dashboard.custom_header
 
 vim.g.dashboard_default_executive = 'telescope'
 
@@ -52,3 +53,4 @@ vim.g.dashboard_custom_section = {
 
 -- vim.g.dashboard_session_directory = '~/.cache/nvim/session'
 vim.g.dashboard_custom_footer = {'blog.kanbber.org'}
+-- vim.g.dashboard_custom_footer = O.dashboard.footer
