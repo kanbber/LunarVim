@@ -108,6 +108,6 @@ return require("packer").startup(
         require_plugin("galaxyline.nvim")
         require_plugin("barbar.nvim")
         require_plugin("TrueZen.nvim")
-		
+
     end
 )
