@@ -1,3 +1,4 @@
+        
 local execute = vim.api.nvim_command
 local fn = vim.fn
 
@@ -83,8 +84,19 @@ return require("packer").startup(
         use {"romgrk/barbar.nvim", opt = true}
 
 		-- zen
-		use {"kdav5758/TrueZen.nvim", opt = true}
+	  	use {"kdav5758/TrueZen.nvim", opt = true}
 
+        -- ui cursorline
+        use{"yamatsum/nvim-cursorline", opt = true}
+
+        -- sneak
+        use{"justinmk/vim-sneak", opt = true}
+
+        -- smooth scrooling
+        use{'karb94/neoscroll.nvim', opt = true}
+
+        -- terminal
+        use {"akinsho/nvim-toggleterm.lua"}
 
         require_plugin("nvim-lspconfig")
         require_plugin("lspsaga.nvim")
@@ -110,6 +122,10 @@ return require("packer").startup(
         require_plugin("galaxyline.nvim")
         require_plugin("barbar.nvim")
         require_plugin("TrueZen.nvim")
+        require_plugin("nvim-cursorline")
+        require_plugin("vim-sneak")
+        require_plugin("neoscroll.nvim")
+        require_plugin("nvim-toggleterm.lua")
 
     end
 )

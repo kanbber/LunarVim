@@ -76,6 +76,7 @@ vim.api.nvim_set_keymap("n", "<leader>h", "<C-W>s", {noremap = true, silent = tr
 
 -- zen
 vim.api.nvim_set_keymap("n", "<leader>z", ":TZAtaraxis<CR>", {noremap = true, silent = true})
+vim.api.nvim_set_keymap("n", "<leader>R", ":set norelativenumber!<CR>", {noremap = true, silent = true})
 
 -- TODO create entire treesitter section
 
@@ -112,7 +113,7 @@ local mappings = {
         b = {"<cmd>Telescope git_branches<cr>", "Checkout branch"},
         c = {"<cmd>Telescope git_commits<cr>", "Checkout commit"},
         C = {"<cmd>Telescope git_bcommits<cr>", "Checkout commit(for current file)"},
-        B = {"<cmd>GitSigns toggle_current_line_bljame<cr>", "Toggle Git Blame"},
+        B = {"<cmd>Gitsigns toggle_current_line_blame<cr>", "Toggle Git Blame"},
     },
     l = {
         name = "+LSP",

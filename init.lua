@@ -51,3 +51,5 @@ require('lsp.kotlin-ls')
 require('lsp.vue-ls')
 require('lsp.angular-ls')
 
+vim.cmd('source ~/.config/nvim/vimscript/lv-sneak/init.vim')
+

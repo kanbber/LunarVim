@@ -65,6 +65,7 @@ require('telescope').setup {
     },
     find_files = {
         hidden =true
+    },
     extensions = {
         fzy_native = {
             override_generic_sorter = false,
