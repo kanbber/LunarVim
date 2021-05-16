@@ -48,13 +48,17 @@ vim.api.nvim_set_keymap('n', '<Space>', '<NOP>', {noremap = true, silent = true}
 vim.g.mapleader = ' '
 
 -- no hl
-vim.api.nvim_set_keymap('n', '<Leader>h', ':set hlsearch!<CR>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<Leader>H', ':set hlsearch!<CR>', {noremap = true, silent = true})
 
 -- explorer
 vim.api.nvim_set_keymap('n', '<Leader>e', ':NvimTreeToggle<CR>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<Leader>?', ':NvimTreeFindFile<CR>', {noremap = true, silent = true})
 
 -- telescope
 vim.api.nvim_set_keymap('n', '<Leader>f', ':Telescope find_files<CR>', {noremap = true, silent = true})
+
+-- ranger
+vim.api.nvim_set_keymap('n', '<Leader>r', ':RnvimrToggle<CR>', {noremap = true, silent = true})
 
 -- dashboard
 vim.api.nvim_set_keymap('n', '<Leader>;', ':Dashboard<CR>', {noremap = true, silent = true})
@@ -66,6 +70,13 @@ vim.api.nvim_set_keymap("v", "<leader>/", ":CommentToggle<CR>", {noremap = true,
 -- close buffer
 vim.api.nvim_set_keymap("n", "<leader>c", ":BufferClose<CR>", {noremap = true, silent = true})
 
+-- split buffer
+vim.api.nvim_set_keymap("n", "<leader>v", "<C-W>v", {noremap = true, silent = true})
+vim.api.nvim_set_keymap("n", "<leader>h", "<C-W>s", {noremap = true, silent = true})
+
+-- zen
+vim.api.nvim_set_keymap("n", "<leader>z", ":TZAtaraxis<CR>", {noremap = true, silent = true})
+
 -- TODO create entire treesitter section
 
 local mappings = {
@@ -73,7 +84,12 @@ local mappings = {
     ["c"] = "Close Buffer",
     ["e"] = "Explorer",
     ["f"] = "Find File",
-    ["h"] = "No Highlight",
+    ["H"] = "No Highlight",
+    ["r"] = "ranger",
+    ["v"] = "splitt vetical",
+    ["h"] = "split horizontal",
+    ["?"] = "find current file",
+    ["z"] = "zen",
     d = {
         name = "+Debug",
         b = {"<cmd>DebugToggleBreakpoint<cr>", "Toggle Breakpoint"},
@@ -92,10 +108,11 @@ local mappings = {
         R = {"<cmd>ResetBuffer<cr>", "Reset Buffer"},
         s = {"<cmd>StageHunk<cr>", "Stage Hunk"},
         u = {"<cmd>UndoStageHunk<cr>", "Undo Stage Hunk"},
-        o = {"<cmd>Telescope git_status<cr>", "Open changed file"},
+        o = {"<cmd>Telescope git_status<cr>", "Status: Open changed file"},
         b = {"<cmd>Telescope git_branches<cr>", "Checkout branch"},
         c = {"<cmd>Telescope git_commits<cr>", "Checkout commit"},
         C = {"<cmd>Telescope git_bcommits<cr>", "Checkout commit(for current file)"},
+        B = {"<cmd>GitSigns toggle_current_line_bljame<cr>", "Toggle Git Blame"},
     },
     l = {
         name = "+LSP",
